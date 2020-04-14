@@ -15,7 +15,7 @@ module.exports.initialize = function () {
         let db = mongoose.createConnection("mongodb+srv://dbUser:Perou24@assign6-rhpt4.mongodb.net/Assign6?retryWrites=true&w=majority");
     
         db.on('error', (err)=>{
-                 reject(err); // reject the promise with the provided error         
+                 reject(err); 
          });
          db.once('open', ()=>{
             User = db.model("users", userSchema);
